@@ -71,4 +71,4 @@ For questions or collaboration, reach out via the contact form or email: [lukero
 
 ---
 
-**Built with ❤️ by Luke Kiprop** 
+**Built by Luke Kiprop** 
