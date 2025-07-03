@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route, NavLink } from "react-router-dom";
 import './App.css';
 import { ThemeContext } from "./index";
-import { fetchProjects, fetchBlogs, fetchAbout, sendContact } from './api';
+import { fetchProjects, fetchBlogs, fetchAbout, sendContact, API_BASE } from './api';
 
 function Navbar() {
   const { theme, toggleTheme } = React.useContext(ThemeContext);
@@ -197,7 +197,7 @@ function AdminLogin() {
     e.preventDefault();
     setStatus('');
     try {
-      const res = await fetch('http://localhost:5000/api/login', {
+      const res = await fetch(`${API_BASE}/login`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(form),
