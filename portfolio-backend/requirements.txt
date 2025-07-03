@@ -1,5 +1,6 @@
-flask
-flask-cors
-flask-jwt-extended
-werkzeug
-Flask-Mail 
+Flask
+Flask-Cors
+Flask-JWT-Extended
+Flask-Mail
+gunicorn
+Werkzeug

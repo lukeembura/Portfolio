@@ -4,19 +4,20 @@ from flask_jwt_extended import JWTManager, create_access_token, jwt_required
 from werkzeug.security import check_password_hash, generate_password_hash
 from flask_mail import Mail, Message
 import datetime
+import os
 
 app = Flask(__name__)
 CORS(app)
-app.config['JWT_SECRET_KEY'] = 'super-secret-key'  # Change this in production!
+app.config['JWT_SECRET_KEY'] = os.environ.get('JWT_SECRET_KEY', 'super-secret-key')  # Use env var, fallback for dev
 jwt = JWTManager(app)
 
 # Flask-Mail config (Gmail example)
 app.config['MAIL_SERVER'] = 'smtp.gmail.com'
 app.config['MAIL_PORT'] = 587
 app.config['MAIL_USE_TLS'] = True
-app.config['MAIL_USERNAME'] = 'lukeafter347@gmail.com'
-app.config['MAIL_PASSWORD'] = 'cdvmlncayxicmkfc'  # Remove spaces!
-app.config['MAIL_DEFAULT_SENDER'] = 'lukeafter347@gmail.com'
+app.config['MAIL_USERNAME'] = os.environ.get('MAIL_USERNAME')
+app.config['MAIL_PASSWORD'] = os.environ.get('MAIL_PASSWORD')
+app.config['MAIL_DEFAULT_SENDER'] = os.environ.get('MAIL_DEFAULT_SENDER')
 mail = Mail(app)
 
 # Hardcoded admin user
