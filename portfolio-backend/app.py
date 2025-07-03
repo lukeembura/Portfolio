@@ -51,6 +51,15 @@ projects = [
     },
     {
         "id": 3,
+        "title": "PlanWise",
+        "description": (
+            "A modern, intuitive task and project management platform built with React. PlanWise helps teams organize, track, and collaborate on projects with a clean, user-friendly interface."
+        ),
+        "tech_stack": ["React", "Flask", "Javascript", "HTML/CSS"],
+        "github": "https://github.com/lukeembura/planwise-phase4-project"
+    },
+    {
+        "id": 4,
         "title": "Booking App",
         "description": (
             "An app that enables users to book a train ticket from different starting stations to their desired destinations. "
