@@ -22,4 +22,13 @@ export async function sendContact(data) {
     body: JSON.stringify(data),
   });
   return res.json();
+}
+
+export async function sendLogin(data) {
+  const res = await fetch(`${API_BASE}/login`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(data),
+  });
+  return res.json();
 } 
