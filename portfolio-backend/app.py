@@ -53,7 +53,7 @@ projects = [
         "id": 3,
         "title": "PlanWise",
         "description": (
-            "A modern, intuitive task and project management platform built with React. PlanWise helps teams organize, track, and collaborate on projects with a clean, user-friendly interface."
+            "A group project: PlanWise is a modern, intuitive task and project management platform built with React. PlanWise helps teams organize, track, and collaborate on projects with a clean, user-friendly interface. I contributed to the UI, API integration, and team collaboration features."
         ),
         "tech_stack": ["React", "Flask", "Javascript", "HTML/CSS"],
         "github": "https://github.com/lukeembura/planwise-phase4-project"
