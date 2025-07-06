@@ -584,3 +584,12 @@ body.light .contact-list a, body.light .contact-list .kenya-flag {
 body.light .contact-list a:visited {
   color: #00323d !important;
 }
+
+.about-linkedin {
+  color: #0a66c2 !important;
+  font-weight: bold;
+}
+.about-linkedin:hover {
+  color: #004182 !important;
+  text-decoration: underline;
+}

@@ -70,7 +70,7 @@ function About() {
         {about.skills.map(skill => <li key={skill}>{skill}</li>)}
       </ul>
       <p>
-        <strong><FaLinkedin style={{marginRight: '0.3em', verticalAlign: 'middle'}} aria-label="LinkedIn"/>LinkedIn:</strong> <a href="https://www.linkedin.com/in/luke-rono-957207371" target="_blank" rel="noopener noreferrer">Luke Rono</a>
+        <strong><FaLinkedin style={{marginRight: '0.3em', verticalAlign: 'middle'}} aria-label="LinkedIn"/>LinkedIn:</strong> <a className="about-linkedin" href="https://www.linkedin.com/in/luke-rono-957207371" target="_blank" rel="noopener noreferrer">Luke Rono</a>
       </p>
     </div>
   );
