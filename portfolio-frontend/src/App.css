@@ -556,3 +556,14 @@ body.light, html.light {
     font-size: 0.97rem;
   }
 }
+
+body.light .project-card h3,
+body.light .blog-card h3,
+body.light .page h2 {
+  color: #007b8a !important;
+  text-shadow: none !important;
+}
+body.light .project-card,
+body.light .blog-card {
+  color: #181818;
+}
