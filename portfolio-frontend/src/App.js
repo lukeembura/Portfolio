@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route, NavLink } from "react-router-do
 import './App.css';
 import { ThemeContext } from "./index";
 import { fetchProjects, fetchBlogs, fetchAbout, sendContact, sendLogin } from './api';
+import { FaEnvelope, FaGithub, FaLinkedin, FaPhone } from 'react-icons/fa';
 
 function Navbar() {
   const { theme, toggleTheme } = React.useContext(ThemeContext);
@@ -168,10 +169,10 @@ function Contact() {
       <h2>Contact Me</h2>
       <p>Feel free to reach out for collaborations, project opportunities, or just to connect!</p>
       <ul className="contact-list">
-        <li><span role="img" aria-label="Email">📧</span> <strong>Email:</strong> <a href="mailto:lukerono0@gmail.com">lukerono0@gmail.com</a></li>
-        <li><span role="img" aria-label="GitHub">🐙</span> <strong>GitHub:</strong> <a href="https://github.com/lukeembura" target="_blank" rel="noopener noreferrer">lukeembura</a></li>
-        <li><span role="img" aria-label="LinkedIn">💼</span> <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/luke-rono-957207371" target="_blank" rel="noopener noreferrer">Luke Rono</a></li>
-        <li><span role="img" aria-label="Phone">📞</span> <strong>Phone:</strong> <a href="tel:+254794798980">+254794798980</a> <span className="kenya-flag" role="img" aria-label="Kenya flag">🇰🇪</span></li>
+        <li><FaEnvelope style={{marginRight: '0.5em'}} aria-label="Email"/> <strong>Email:</strong> <a href="mailto:lukerono0@gmail.com">lukerono0@gmail.com</a></li>
+        <li><FaGithub style={{marginRight: '0.5em'}} aria-label="GitHub"/> <strong>GitHub:</strong> <a href="https://github.com/lukeembura" target="_blank" rel="noopener noreferrer">lukeembura</a></li>
+        <li><FaLinkedin style={{marginRight: '0.5em'}} aria-label="LinkedIn"/> <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/luke-rono-957207371" target="_blank" rel="noopener noreferrer">Luke Rono</a></li>
+        <li><FaPhone style={{marginRight: '0.5em'}} aria-label="Phone"/> <strong>Phone:</strong> <a href="tel:+254794798980">+254794798980</a> <span className="kenya-flag" role="img" aria-label="Kenya flag">🇰🇪</span></li>
       </ul>
       <form onSubmit={handleSubmit} className="contact-form">
         <input name="name" value={form.name} onChange={handleChange} placeholder="Your Name" required />

@@ -3,7 +3,7 @@ body, html {
   margin: 0;
   padding: 0;
   font-family: 'Segoe UI', Arial, sans-serif;
-  background: var(--bg);
+  background: linear-gradient(135deg, #181818 0%, #232a34 100%);
   color: var(--text);
   min-height: 100vh;
   max-width: 100vw;
@@ -37,6 +37,7 @@ body.light {
   --text: #181818;
   --navbar-bg: rgba(255,255,255,0.95);
   --navbar-text: #181818;
+  background: linear-gradient(135deg, #f5f5f5 0%, #e0f7fa 100%);
 }
 
 .navbar {
@@ -154,6 +155,10 @@ body.light {
   color: var(--text);
   box-shadow: 0 4px 24px rgba(0,0,0,0.18);
   border: 2px solid var(--accent);
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
 }
 body.light .page {
   background: rgba(255,255,255,0.7);
@@ -166,12 +171,22 @@ body.light .page {
   box-shadow: 0 4px 24px rgba(0,0,0,0.18);
   border-color: var(--accent);
 }
+.page h2 {
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: 0.3em;
+  margin-bottom: 1.2em;
+  letter-spacing: 1px;
+}
 @media (max-width: 600px) {
   .navbar { flex-direction: column; height: auto; padding: 1rem; }
   .nav-links { flex-direction: column; gap: 1rem; }
   .main-content { padding-top: 100px; }
   .hero-section h1 { font-size: 2rem; }
   .hero-section p { font-size: 1rem; padding: 1rem; }
+  .page h2 {
+    font-size: 1.3rem;
+    padding-bottom: 0.2em;
+  }
 }
 
 .theme-toggle {
@@ -355,7 +370,7 @@ body.dark .contact-form textarea {
   resize: vertical;
 }
 .contact-form button {
-  background: var(--accent);
+  background: linear-gradient(90deg, var(--accent) 60%, #00bcd4 100%);
   color: #181818;
   border: none;
   border-radius: 8px;
@@ -363,13 +378,15 @@ body.dark .contact-form textarea {
   font-size: 1.1rem;
   font-weight: bold;
   cursor: pointer;
-  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s, transform 0.2s;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.10);
   margin-top: 0.5rem;
 }
 .contact-form button:hover {
-  background: #ff9800;
+  background: linear-gradient(90deg, #00bcd4 60%, var(--accent) 100%);
   color: #fff;
+  transform: translateY(-2px) scale(1.04);
+  box-shadow: 0 4px 18px rgba(0,0,0,0.18);
 }
 
 .moringa-link {
@@ -476,5 +493,66 @@ body.dark .contact-form textarea {
   .contact-form button {
     font-size: 0.95rem;
     padding: 0.5rem 0.7rem;
+  }
+}
+
+/* --- Enhanced Button Styles --- */
+.project-card a, .blog-card a {
+  background: linear-gradient(90deg, var(--accent) 60%, #00bcd4 100%);
+  color: #181818;
+  border: none;
+  border-radius: 8px;
+  padding: 0.75rem 1.5rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s, transform 0.2s;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+  margin-top: 0.5rem;
+}
+.project-card a:hover, .blog-card a:hover {
+  background: linear-gradient(90deg, #00bcd4 60%, var(--accent) 100%);
+  color: #fff;
+  transform: translateY(-2px) scale(1.04);
+  box-shadow: 0 4px 18px rgba(0,0,0,0.18);
+}
+
+/* --- Card Polish --- */
+.project-card, .blog-card {
+  box-shadow: 0 6px 32px rgba(0,0,0,0.18), 0 0 0 2px var(--accent);
+  border-radius: 18px;
+  border: 2px solid var(--accent);
+  background: rgba(24,24,24,0.97);
+  transition: box-shadow 0.2s, border-color 0.2s, transform 0.2s;
+}
+body.light .project-card, body.light .blog-card {
+  background: rgba(255,255,255,0.98);
+}
+.project-card:hover, .blog-card:hover {
+  box-shadow: 0 12px 36px rgba(0,188,212,0.18), 0 0 0 2.5px #ff9800;
+  border-color: #ff9800;
+  transform: translateY(-6px) scale(1.03);
+}
+
+/* --- Subtle Background Gradient --- */
+body, html {
+  background: linear-gradient(135deg, #181818 0%, #232a34 100%);
+}
+body.light, html.light {
+  background: linear-gradient(135deg, #f5f5f5 0%, #e0f7fa 100%);
+}
+
+/* --- Section Spacing --- */
+.page {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
+/* --- Responsive Typography --- */
+@media (max-width: 600px) {
+  .project-card, .blog-card {
+    font-size: 0.97rem;
   }
 }
