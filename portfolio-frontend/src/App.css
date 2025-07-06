@@ -567,3 +567,13 @@ body.light .project-card,
 body.light .blog-card {
   color: #181818;
 }
+
+body.light .navbar, body.light .nav-links li a, body.light .nav-links li .active {
+  color: #007b8a !important;
+}
+body.light .nav-links li .active {
+  border-bottom: 2.5px solid #007b8a !important;
+}
+body.light .contact-list strong {
+  color: #007b8a !important;
+}
