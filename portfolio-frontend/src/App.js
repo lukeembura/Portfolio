@@ -168,10 +168,10 @@ function Contact() {
       <h2>Contact Me</h2>
       <p>Feel free to reach out for collaborations, project opportunities, or just to connect!</p>
       <ul className="contact-list">
-        <li><strong>Email:</strong> <a href="mailto:lukerono0@gmail.com">lukerono0@gmail.com</a></li>
-        <li><strong>GitHub:</strong> <a href="https://github.com/lukeembura" target="_blank" rel="noopener noreferrer">lukeembura</a></li>
-        <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/luke-rono-957207371" target="_blank" rel="noopener noreferrer">Luke Rono</a></li>
-        <li><strong>Phone:</strong> <a href="tel:+254794798980">+254794798980</a> <span className="kenya-flag" role="img" aria-label="Kenya flag">🇰🇪</span></li>
+        <li><span role="img" aria-label="Email">📧</span> <strong>Email:</strong> <a href="mailto:lukerono0@gmail.com">lukerono0@gmail.com</a></li>
+        <li><span role="img" aria-label="GitHub">🐙</span> <strong>GitHub:</strong> <a href="https://github.com/lukeembura" target="_blank" rel="noopener noreferrer">lukeembura</a></li>
+        <li><span role="img" aria-label="LinkedIn">💼</span> <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/luke-rono-957207371" target="_blank" rel="noopener noreferrer">Luke Rono</a></li>
+        <li><span role="img" aria-label="Phone">📞</span> <strong>Phone:</strong> <a href="tel:+254794798980">+254794798980</a> <span className="kenya-flag" role="img" aria-label="Kenya flag">🇰🇪</span></li>
       </ul>
       <form onSubmit={handleSubmit} className="contact-form">
         <input name="name" value={form.name} onChange={handleChange} placeholder="Your Name" required />
