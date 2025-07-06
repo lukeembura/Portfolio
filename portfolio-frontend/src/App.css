@@ -577,3 +577,13 @@ body.light .nav-links li .active {
 body.light .contact-list strong {
   color: #007b8a !important;
 }
+
+body.light .contact-list a {
+  color: #005c6e !important;
+}
+body.light .contact-list a:hover {
+  color: #ff9800 !important;
+}
+body.light .contact-list .kenya-flag {
+  color: #005c6e !important;
+}
