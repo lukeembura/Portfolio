@@ -28,7 +28,7 @@ function Home() {
   return (
     <section className="hero-section">
       <div className="hero-overlay">
-        <h1>Hi there, I am Luke Kiprop</h1>
+        <h1>Hi there <span role="img" aria-label="waving hand">👋</span>, I am Luke Kiprop</h1>
         <p>
           I am currently a Full Stack Developer studying at{' '}
           <a
