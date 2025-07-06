@@ -578,12 +578,9 @@ body.light .contact-list strong {
   color: #007b8a !important;
 }
 
-body.light .contact-list a {
-  color: #005c6e !important;
+body.light .contact-list a, body.light .contact-list .kenya-flag {
+  color: #00323d !important;
 }
-body.light .contact-list a:hover {
-  color: #ff9800 !important;
-}
-body.light .contact-list .kenya-flag {
-  color: #005c6e !important;
+body.light .contact-list a:visited {
+  color: #00323d !important;
 }
