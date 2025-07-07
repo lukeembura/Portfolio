@@ -60,6 +60,7 @@ function About() {
   return (
     <div className="page">
       <h2>About Me</h2>
+      <p style={{fontStyle: 'italic', color: 'var(--accent)'}}>A little more about who I am in coding and beyond coding.</p>
       <p>{about.bio}</p>
       <h3>Core Skills:</h3>
       <ul>
@@ -89,12 +90,25 @@ function Projects() {
   return (
     <div className="page">
       <h2>Projects</h2>
+      <p style={{fontStyle: 'italic', color: 'var(--accent)'}}>Here's a look at some of the things I've built, each with its own story and lesson.</p>
       <div className="project-list">
         {projects.map(project => (
           <div className="project-card" key={project.id}>
             <h3>{project.title}</h3>
             <p>{project.description}<br />
               <strong>Tech Stack:</strong> {project.tech_stack.join(', ')}
+              {project.title === 'PlanWise' && (
+                <><br /><span style={{color: 'var(--accent)'}}>This project challenged me to design for real teamwork and user experience.</span></>
+              )}
+              {project.title === 'Library Manager CLI' && (
+                <><br /><span style={{color: 'var(--accent)'}}>I learned a lot about ORM and building user-friendly command-line tools.</span></>
+              )}
+              {project.title === 'Booking App' && (
+                <><br /><span style={{color: 'var(--accent)'}}>This project taught me the importance of smooth user experience and robust booking logic.</span></>
+              )}
+              {project.title === 'Local Event Finder Web App' && (
+                <><br /><span style={{color: 'var(--accent)'}}>I discovered the power of teamwork and API integration in this group project.</span></>
+              )}
             </p>
             <a href={project.github} target="_blank" rel="noopener noreferrer">View on GitHub</a>
           </div>
@@ -121,6 +135,7 @@ function Blogs() {
   return (
     <div className="page">
       <h2>Blog Posts</h2>
+      <p style={{fontStyle: 'italic', color: 'var(--accent)'}}>I write to share what I'm learning, reflect on my journey, and connect with others in tech and beyond.</p>
       <div className="blog-list">
         {blogs.map(blog => (
           <div className="blog-card" key={blog.id}>
@@ -163,7 +178,7 @@ function Contact() {
   return (
     <div className="page">
       <h2>Contact Me</h2>
-      <p>Feel free to reach out for collaborations, project opportunities, or just to connect!</p>
+      <p style={{fontStyle: 'italic', color: 'var(--accent)'}}>Whether you want to collaborate, chat about tech, or just say hi, I'd love to hear from you!</p>
       <ul className="contact-list">
         <li><FaEnvelope style={{marginRight: '0.5em'}} aria-label="Email"/> <strong>Email:</strong> <a href="mailto:lukerono0@gmail.com">lukerono0@gmail.com</a></li>
         <li><FaGithub style={{marginRight: '0.5em'}} aria-label="GitHub"/> <strong>GitHub:</strong> <a href="https://github.com/lukeembura" target="_blank" rel="noopener noreferrer">lukeembura</a></li>
