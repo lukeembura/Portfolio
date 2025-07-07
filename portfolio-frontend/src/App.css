@@ -176,6 +176,7 @@ body.light .page {
   padding-bottom: 0.3em;
   margin-bottom: 1.2em;
   letter-spacing: 1px;
+  margin-top: 0;
 }
 @media (max-width: 600px) {
   .navbar { flex-direction: column; height: auto; padding: 1rem; }
@@ -592,4 +593,14 @@ body.light .contact-list a:visited {
 .about-linkedin:hover {
   color: #004182 !important;
   text-decoration: underline;
+}
+
+.section-intro {
+  font-style: italic;
+  color: var(--accent);
+  margin-bottom: 0.7em;
+  margin-top: 0.2em;
+}
+body.light .section-intro {
+  color: #00323d !important;
 }
