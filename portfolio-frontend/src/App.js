@@ -28,19 +28,11 @@ function Home() {
   return (
     <section className="hero-section">
       <div className="hero-overlay">
-        <h1>Hi there <span role="img" aria-label="waving hand">👋</span>, I am Luke Kiprop</h1>
+        <h1>Hi there <span role="img" aria-label="waving hand">👋</span>, I'm Luke Kiprop</h1>
         <p>
-          I am currently a Full Stack Developer studying at{' '}
-          <a
-            href="https://moringaschool.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="moringa-link"
-          >
-            Moringa School
-          </a>.
-          <br />
-          I am passionate about coding and always looking for new challenges to solve. I am a team player and eager to learn from others.
+          I'm a curious builder, resourceful problem-solver, and someone who loves making a positive impact—whether I'm working solo or collaborating with a team. I believe in empathy, honesty, and always doing what's right.<br /><br />
+          <strong>Fun fact:</strong> When I'm not coding, you'll probably find me challenging friends to a game of pool, football, or a heated match of a football game. I'm always up for a little friendly competition—on the field or on the screen!<br /><br />
+          <strong>Scroll down to see what I've been building and what drives me!</strong>
         </p>
       </div>
     </section>
