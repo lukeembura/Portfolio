@@ -31,8 +31,7 @@ function Home() {
         <h1>Hi there <span role="img" aria-label="waving hand">👋</span>, I'm Luke Kiprop</h1>
         <p>
           I'm a curious builder, resourceful problem-solver, and someone who loves making a positive impact—whether I'm working solo or collaborating with a team. I believe in empathy, honesty, and always doing what's right.<br /><br />
-          <strong>Fun fact:</strong> When I'm not coding, you'll probably find me challenging friends to a game of pool, football, or a heated match of a football game. I'm always up for a little friendly competition—on the field or on the screen!<br /><br />
-          <strong>Scroll down to see what I've been building and what drives me!</strong>
+          <strong>Fun fact:</strong> When I'm not coding, you'll probably find me challenging friends to a game of pool, football, or a heated match of a football game. I'm always up for a little friendly competition—on the field or on the screen!
         </p>
       </div>
     </section>
