@@ -59,8 +59,8 @@ function About() {
 
   return (
     <div className="page">
-      <p className="section-intro">A little more about who I am in coding and beyond coding.</p>
       <h2>About Me</h2>
+      <p className="section-intro">A little more about who I am in coding and beyond coding.</p>
       <p>{about.bio}</p>
       <h3>Core Skills:</h3>
       <ul>
@@ -89,8 +89,8 @@ function Projects() {
 
   return (
     <div className="page">
-      <p className="section-intro">Here's a look at some of the things I've built, each with its own story and lesson.</p>
       <h2>Projects</h2>
+      <p className="section-intro">Here's a look at some of the things I've built, each with its own story and lesson.</p>
       <div className="project-list">
         {projects.map(project => (
           <div className="project-card" key={project.id}>
@@ -134,8 +134,8 @@ function Blogs() {
 
   return (
     <div className="page">
-      <p className="section-intro">I write to share what I'm learning, reflect on my journey, and connect with others in tech and beyond.</p>
       <h2>Blog Posts</h2>
+      <p className="section-intro">I write to share what I'm learning, reflect on my journey, and connect with others in tech and beyond.</p>
       <div className="blog-list">
         {blogs.map(blog => (
           <div className="blog-card" key={blog.id}>
@@ -177,8 +177,8 @@ function Contact() {
 
   return (
     <div className="page">
-      <p className="section-intro">Whether you want to collaborate, chat about tech, or just say hi, I'd love to hear from you!</p>
       <h2>Contact Me</h2>
+      <p className="section-intro">Whether you want to collaborate, chat about tech, or just say hi, I'd love to hear from you!</p>
       <ul className="contact-list">
         <li><FaEnvelope style={{marginRight: '0.5em'}} aria-label="Email"/> <strong>Email:</strong> <a href="mailto:lukerono0@gmail.com">lukerono0@gmail.com</a></li>
         <li><FaGithub style={{marginRight: '0.5em'}} aria-label="GitHub"/> <strong>GitHub:</strong> <a href="https://github.com/lukeembura" target="_blank" rel="noopener noreferrer">lukeembura</a></li>
