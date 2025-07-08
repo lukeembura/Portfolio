@@ -152,13 +152,33 @@ function Contact() {
   const [form, setForm] = React.useState({ name: '', email: '', message: '' });
   const [status, setStatus] = React.useState('');
   const [loading, setLoading] = React.useState(false);
+  const [errors, setErrors] = React.useState({});
+  const [showConfetti, setShowConfetti] = React.useState(false);
+
+  const validate = () => {
+    const errs = {};
+    if (!form.name.trim()) errs.name = 'Name is required.';
+    if (!form.email.trim()) {
+      errs.email = 'Email is required.';
+    } else if (!/^\S+@\S+\.\S+$/.test(form.email)) {
+      errs.email = 'Please enter a valid email.';
+    }
+    if (!form.message.trim()) errs.message = 'Message is required.';
+    return errs;
+  };
 
   const handleChange = e => {
     setForm({ ...form, [e.target.name]: e.target.value });
+    setErrors({ ...errors, [e.target.name]: undefined });
   };
 
   const handleSubmit = async e => {
     e.preventDefault();
+    const errs = validate();
+    if (Object.keys(errs).length > 0) {
+      setErrors(errs);
+      return;
+    }
     setLoading(true);
     setStatus('');
     try {
@@ -166,6 +186,8 @@ function Contact() {
       if (res.status === 'success') {
         setStatus('Message sent!');
         setForm({ name: '', email: '', message: '' });
+        setShowConfetti(true);
+        setTimeout(() => setShowConfetti(false), 2000);
       } else {
         setStatus('Failed to send message.');
       }
@@ -185,13 +207,16 @@ function Contact() {
         <li><FaLinkedin style={{marginRight: '0.5em'}} aria-label="LinkedIn"/> <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/luke-rono-957207371" target="_blank" rel="noopener noreferrer">Luke Rono</a></li>
         <li><FaPhone style={{marginRight: '0.5em'}} aria-label="Phone"/> <strong>Phone:</strong> <a href="tel:+254794798980">+254794798980</a> <span className="kenya-flag" role="img" aria-label="Kenya flag">🇰🇪</span></li>
       </ul>
-      <form onSubmit={handleSubmit} className="contact-form">
+      <form onSubmit={handleSubmit} className="contact-form" noValidate>
         <input name="name" value={form.name} onChange={handleChange} placeholder="Your Name" required />
+        {errors.name && <span style={{color: 'red', fontSize: '0.95em'}}>{errors.name}</span>}
         <input name="email" value={form.email} onChange={handleChange} placeholder="Your Email" type="email" required />
+        {errors.email && <span style={{color: 'red', fontSize: '0.95em'}}>{errors.email}</span>}
         <textarea name="message" value={form.message} onChange={handleChange} placeholder="Your Message" required />
+        {errors.message && <span style={{color: 'red', fontSize: '0.95em'}}>{errors.message}</span>}
         <button type="submit" disabled={loading}>{loading ? 'Sending...' : 'Send Message'}</button>
       </form>
-      {status && <p>{status}</p>}
+      {status && <p>{status} {showConfetti && <span role="img" aria-label="confetti">🎉</span>}</p>}
     </div>
   );
 }
