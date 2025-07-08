@@ -604,3 +604,19 @@ body.light .contact-list a:visited {
 body.light .section-intro {
   color: #00323d !important;
 }
+
+.theme-toggle span {
+  display: inline-block;
+  transition: transform 0.5s cubic-bezier(0.4, 0.2, 0.2, 1), color 0.3s;
+}
+.theme-toggle:active span {
+  transform: rotate(180deg) scale(1.2);
+}
+.theme-toggle span.theme-toggle-animate {
+  animation: theme-spin 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+}
+@keyframes theme-spin {
+  0% { transform: rotate(0deg) scale(1); }
+  60% { transform: rotate(180deg) scale(1.2); }
+  100% { transform: rotate(360deg) scale(1); }
+}

@@ -8,6 +8,14 @@ import Confetti from 'react-confetti';
 
 function Navbar() {
   const { theme, toggleTheme } = React.useContext(ThemeContext);
+  const [animateTheme, setAnimateTheme] = React.useState(false);
+
+  const handleThemeToggle = () => {
+    setAnimateTheme(true);
+    toggleTheme();
+    setTimeout(() => setAnimateTheme(false), 700);
+  };
+
   return (
     <nav className="navbar">
       <div className="logo">LUKE</div>
@@ -18,8 +26,10 @@ function Navbar() {
         <li><NavLink to="/blogs" className={({ isActive }) => isActive ? 'active' : ''}>Blogs</NavLink></li>
         <li><NavLink to="/contact" className={({ isActive }) => isActive ? 'active' : ''}>Contact</NavLink></li>
       </ul>
-      <button className="theme-toggle" onClick={toggleTheme} aria-label="Toggle dark/light mode">
-        {theme === 'dark' ? '🌙 Dark' : '☀️ Light'}
+      <button className="theme-toggle" onClick={handleThemeToggle} aria-label="Toggle dark/light mode">
+        <span className={animateTheme ? 'theme-toggle-animate' : ''}>
+          {theme === 'dark' ? '🌙 Dark' : '☀️ Light'}
+        </span>
       </button>
     </nav>
   );
