@@ -4,6 +4,7 @@ import './App.css';
 import { ThemeContext } from "./index";
 import { fetchProjects, fetchBlogs, fetchAbout, sendContact, sendLogin } from './api';
 import { FaEnvelope, FaGithub, FaLinkedin, FaPhone } from 'react-icons/fa';
+import Confetti from 'react-confetti';
 
 function Navbar() {
   const { theme, toggleTheme } = React.useContext(ThemeContext);
@@ -198,7 +199,8 @@ function Contact() {
   };
 
   return (
-    <div className="page">
+    <div className="page" style={{position: 'relative', overflow: 'hidden'}}>
+      {showConfetti && <Confetti numberOfPieces={180} recycle={false} style={{position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', pointerEvents: 'none', zIndex: 9999}} />}
       <h2>Contact Me</h2>
       <p className="section-intro">Whether you want to collaborate, chat about tech, or just say hi, I'd love to hear from you!</p>
       <ul className="contact-list">
@@ -216,7 +218,7 @@ function Contact() {
         {errors.message && <span style={{color: 'red', fontSize: '0.95em'}}>{errors.message}</span>}
         <button type="submit" disabled={loading}>{loading ? 'Sending...' : 'Send Message'}</button>
       </form>
-      {status && <p>{status} {showConfetti && <span role="img" aria-label="confetti">🎉</span>}</p>}
+      {status && <p>{status}</p>}
     </div>
   );
 }
