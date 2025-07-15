@@ -150,6 +150,21 @@ body.light .hero-section::before {
   border-radius: 12px;
   text-shadow: 0 2px 8px rgba(0,0,0,0.7), 0 1px 1px rgba(0,0,0,0.5);
 }
+body.light .hero-section p {
+  color: #181818 !important;
+  text-shadow: none !important;
+}
+body.light .hero-section h1 {
+  color: #00bcd4 !important;
+  text-shadow: none !important;
+}
+body.light .hero-section,
+body.light .hero-section p,
+body.light .hero-section strong,
+body.light .hero-section em {
+  color: #222 !important;
+  text-shadow: none !important;
+}
 .page {
   max-width: 900px;
   margin: 2rem auto;
