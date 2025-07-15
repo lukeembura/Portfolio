@@ -246,9 +246,13 @@ function App() {
       <Navbar />
       <div className="main-content">
         <Home />
+        <hr className="section-divider" />
         <About />
+        <hr className="section-divider" />
         <Projects />
+        <hr className="section-divider" />
         <Blogs />
+        <hr className="section-divider" />
         <Contact />
       </div>
     </>

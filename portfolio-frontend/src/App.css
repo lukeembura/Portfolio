@@ -624,3 +624,11 @@ body.light .section-intro {
 section[id] {
   scroll-margin-top: 80px;
 }
+
+.section-divider {
+  border: none;
+  border-top: 2px solid var(--accent);
+  margin: 3rem auto;
+  width: 80%;
+  opacity: 0.4;
+}
