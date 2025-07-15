@@ -131,6 +131,10 @@ body.light {
   border-radius: 0 0 32px 32px;
 }
 
+body.light .hero-section::before {
+  background: none;
+}
+
 .hero-section h1 {
   font-size: 3rem;
   margin-bottom: 1rem;
